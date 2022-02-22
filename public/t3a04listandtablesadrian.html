@@ -53,6 +53,34 @@
                
     
                <div id="myDiv01">...</div>
+    <h3>A demonstration of how to access a TABLE element</h3>
+
+<table id="myTable01">
+  <tr>
+    <td>cell 1</td>
+    <td>cell 2</td>
+  </tr>
+  <tr>
+    <td>cell 3</td>
+    <td>cell 4</td>
+  </tr>
+</table>
+
+<p>Click the button to remove the first row in the table.</p>
+
+<button onclick="myFunction1()">Try it 1</button>
+<button onclick="myFunction2()">Try it 2</button>
+
+<script>
+function myFunction1() {
+  var x = document.getElementById("myTable01");
+  x.deleteRow(0);
+}
+function myFunction2() {
+  var x = document.getElementById("myTable01");
+  x.insertRow(2);
+}
+</script>
      </body>
    </html>
                                 
