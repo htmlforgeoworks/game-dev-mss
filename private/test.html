@@ -11,7 +11,14 @@ table, td {
   <body>
     <h1>This is a test for JavaScript code.</h1>
     <p>Click the buttons to create and delete row(s) for the table.</p>
-
+<br>
+<br>
+<button onclick="myCreateFunctionRow()">Create row</button>
+<button onclick="myDeleteFunctionRow()">Delete row</button>
+<button onclick="myCreateFunctionCol()">Create column</button>
+<button onclick="myDeleteFunctionCol()">Delete coloumn</button>
+    <br>
+    <br>
 <table id="myTable">
   <tr>
     <td>Row1 cell1</td>
@@ -29,13 +36,9 @@ table, td {
     <td>Row3 cell3</td>
   </tr>
 </table>
-<br>
-
-<button onclick="myCreateFunction()">Create row</button>
-<button onclick="myDeleteFunction()">Delete row</button>
 
 <script>
-function myCreateFunction() {
+function myCreateFunctionRow() {
   var table = document.getElementById("myTable");
   var row = table.insertRow(0);
   var cell1 = row.insertCell(0);
@@ -46,8 +49,22 @@ function myCreateFunction() {
   cell3.innerHTML = "NEW CELL3";
 }
 
-function myDeleteFunction() {
+function myDeleteFunctionRow() {
   document.getElementById("myTable").deleteRow(0);
+}
+  function myCreateFunctionCol() {
+  var table = document.getElementById("myTable");
+  var col = table.insertCol(0);
+  var cell1 = col.insertCell(0);
+  var cell2 = col.insertCell(1);
+  var cell3 = col.insertCell(2);
+  cell1.innerHTML = "NEW CELL1";
+  cell2.innerHTML = "NEW CELL2";
+  cell3.innerHTML = "NEW CELL3";
+}
+
+function myDeleteFunctionCol() {
+  document.getElementById("myTable").deleteCol(0);
 }
 </script>
 
