@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>T3A12</title>
+    </head>
+    <body>
+        Version 0.0.1
+
+        <h2 align=center>t3a12-objects.html</h2>
+
+        <a href="https://www.w3schools.com/jsref/obj_events.asp">Refernce to javascript objects</a>
+
+        Objects are stored named varibles
+
+        <h4>Example Objects code</h4>
+        <pre>
+            let myPerson = {
+                "firstName": "John",
+                "lastName": "Doe",
+                "age": "50,"
+                "eyeColor": "blue",
+            }
+        </pre>
+
+        <h4> Example working Objects code</h4>
+
+        Nothing: <input type=text id="myText01" value="Useless at the moment"><br>
+
+
+        <input type=button value="Example Object set and show" onclick="{
+
+            let myPerson = {
+                'firstName' : 'John',
+                'lastName'  : 'Doe',
+                'age'       :  50,
+                'eyeColor'  : 'blue'
+            }
+            document.getElementById('myDiv01').innerHTML = '<br>Myperson Object has properties: <br>'
+            document.getElementById('myDiv01').innerHTML += 'firstName :'+ myPerson.firstName + '<br>'
+            document.getElementById('myDiv01').innerHTML += 'lastName :'+ myPerson.lastName + '<br>'
+            document.getElementById('myDiv01').innerHTML += 'age :'+ myPerson.age + '<br>'
+            document.getElementById('myDiv01').innerHTML += 'eyeColor :'+ myPerson.eyeColor + '<br>'
+        }">
+
+        <div id="myDiv01">...</div>
+    </body>
+</html>
