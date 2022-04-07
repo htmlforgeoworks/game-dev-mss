@@ -1,0 +1,13 @@
+function myMosue() {
+
+   let sampleEle = document.querySelector(".sample");
+
+   document.body.addEventListener("mousemove", (event) => {
+      let rect = myCanvas.getBoundingClientRect()
+      x = event.clientX - rect.left
+      y = event.clientY - rect.top
+      sampleEle.innerHTML = "X: " + x + " Y: " + y;
+   })
+ }
+
+ etInterval(myMosue,)
