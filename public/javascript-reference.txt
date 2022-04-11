@@ -112,3 +112,24 @@ function pencilDraw()
 
    }
   
+
+
+ // Circle
+   
+    /*  function cirDraw()
+      {
+         if(clicks3 % 2 == 0)
+         {
+            x1 = event.clientX - rect.left
+            y1 = event.clientY - rect.top
+         }
+         else {
+            x2 = event.clientX - rect.left
+            y2 = event.clientY - rect.top
+         }
+         ctx.beginPath()
+            ctx.arc(x, y, , 0, 2 * Math.PI)
+            ctx.stroke()
+       }
+       clicks3 ++
+      }*/
