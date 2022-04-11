@@ -59,6 +59,55 @@ function pencilDraw()
       ctx.moveTo(x1, y1)
       ctx.lineTo(x2, y2)
       ctx.stroke()
+      
+      
+      
+      let myCanvas=document.getElementById('myCoolTag');
+   let ctx=myCanvas.getContext('2d');
+   let x1
+   let y1
+   let x2
+   let y2
+   let clicks = 0
+   let clicks2 = 0
+   mode = 0
+   myCanvas.addEventListener('mousedown', event => {
+      rect = myCanvas.getBoundingClientRect()
+    
+      
+      ctx.beginPath()
+      ctx.moveTo(x1, y1)
+      if(mode == 3)
+      {
+         cirDraw()
+      }
+      if(mode == 2)
+      {
+         rectDraw()
+      }
+      if(mode == 1)
+      {
+         lineDraw()
+      }
+      
+      
+      
+      
+      if (mode == 0)
+      {
+         myCanvas.addEventListener('mousemove', pencilDraw)
+      }
+
+
+      
+   })
+   myCanvas.addEventListener('mouseup', event => {
+      if (mode == 0)
+      {
+      myCanvas.removeEventListener('mousemove', pencilDraw)
+      }
+
+   })
       clicks ++
 
    }
