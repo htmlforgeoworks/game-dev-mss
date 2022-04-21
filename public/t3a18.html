@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>T3A18.html</title>
+   </head>
+   <body>
+      <h2 align=center>t3a18-canvas.html</h2>
+<p>You use loops and variables to make fast fancy drawings</p> 
+<br>
+<br>
+<!--<input type="button" value="Save" onclick="">
+<input type="button" value="Undo">
+<input type="button" value="Eraser">-->
+<input type="button" value="Pencil" onclick="mode = 0">
+<!--<input type="button" value="Line" onclick="mode = 1">
+ <input type="button" value="Rectangle" onclick="mode = 2">
+<input type="button" value="Circle" onclick="mode = 3">
+<input type="button" value="Arc" onclick="mode = 4">
+<input type="button" value="Polygon" onclick="mode = 5">
+<input type="button" value="Text" onclick="mode = 6">-->
+<br>
+<br>
+<canvas id="canvas01" width="1000" height="500" style="border: 1px solid black;"></canvas>
+<script>
+     let myCanvas=document.getElementById('canvas01');
+   let ctx=myCanvas.getContext('2d');
+   let x1
+   let y1
+   let x2
+   let y2
+   let clicks = 0
+   let clicks2 = 0
+   mode = 0
+   myCanvas.addEventListener('mousedown', event => {
+      rect = myCanvas.getBoundingClientRect()
+    
+      
+      ctx.beginPath()
+      ctx.moveTo(x1, y1)
+      if(mode == 3)
+      {
+         cirDraw()
+      }
+      if(mode == 2)
+      {
+         rectDraw()
+      }
+      if(mode == 1)
+      {
+         lineDraw()
+      }
+      
+      
+      
+      
+      if (mode == 0)
+      {
+         myCanvas.addEventListener('mousemove', pencilDraw)
+      }
+
+
+      
+   })
+   myCanvas.addEventListener('mouseup', event => {
+      if (mode == 0)
+      {
+      myCanvas.removeEventListener('mousemove', pencilDraw)
+      }
+
+   })
+      clicks ++
+
+   
+  
+
+   //Save
+   /*
+  
+   */
+   //Pencil
+   
+   function pencilDraw()
+    {
+      x1 = x2
+      y1 = y2
+      let rect = myCanvas.getBoundingClientRect()
+      x2 = event.clientX - rect.left
+      y2 = event.clientY - rect.top
+     
+        
+      ctx.lineTo(x2, y2)
+      ctx.stroke()
+      console.log("test")
+   
+    }
+   //Rectangle
+   /*
+   function rectDraw()
+
+   */
+   //Straight line
+   /*
+   function lineDraw()
+   {
+      {
+      if(clicks % 2 == 0)
+      {
+      x2 = event.clientX - rect.left
+      y2 = event.clientY - rect.top
+      }
+      else {
+         x1 = event.clientX - rect.left
+         y1 = event.clientY - rect.top
+         
+      }
+      ctx.beginPath()
+      ctx.moveTo(x1, y1)
+      ctx.lineTo(x2, y2)
+      ctx.stroke()
+
+    console.log('w')
+    
+    
+   }*/
+
+   
+ 
+   //Circle
+   /*
+   function cirDraw()
+   */
+   //Erase
+   /*
+   function canvasErase()
+   */
+   //Color
+   /*
+   function colorFormat()
+   */
+   //Polygons
+   /*
+   function polyDraw()
+   */
+   //Size
+   /*
+   function sizFormat()
+   */
+   //reference to consider
+   /*
+   createEvent()
+   .addEventListener()
+   .removeEventListener()
+   beginPath()
+   lineTo()
+   moveTo()
+   //MouseEvents
+   onclick
+   oncontextmenu
+   onmousedown
+   onmouseenter
+   onmouseleave
+   onmousemove
+   onmouseout
+   onmouseover
+   onmouseup
+   clientX
+   clientY
+   offsetX
+   offsetY
+   movementX
+   movementY
+   //DragEvents
+   drag
+   dragend
+   dragenter
+   dragleave
+   dragover
+   dragstart
+   drop
+   */
+
+
+</script>
+   </body>
+</html>
+ 
+
+
