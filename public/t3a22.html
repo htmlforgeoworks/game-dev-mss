@@ -71,4 +71,8 @@ function myCheckHit(){
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
   myCheckHit()    // checks for all collisions
 }">
+<input type=button value="Image Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+   document.getElementById('myImg').style.bottom = parseInt(document.getElementById('myImg').style.bottom) + 10 + 'px'                                                                                                
+   myCheckHit()   // checks for all collisions
+}">
    <br><br>
