@@ -16,6 +16,7 @@ echo "<br>";
 echo"There are 2 varibles in this page<br>";
 echo"<br>";
 echo $Y;
+echo"<br>";
 echo"Lets do math with php variables";
 $X = 10;
 $y = 20;
