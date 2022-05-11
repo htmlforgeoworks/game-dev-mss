@@ -5,3 +5,5 @@ echo"<p>Here will be a library of php Files</p>";
 echo"<hr>";
 echo"<h2>The following files:</h2>";
 echo"<a href='https://htmlforgeoworks.github.io/game-dev-mss/public/myphp01.php'>Myphp01.php</a>";
+$x = "This is a php page";
+echo"This is a test and $x";
