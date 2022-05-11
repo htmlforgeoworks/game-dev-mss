@@ -10,6 +10,7 @@ echo"<h2>Some other php stuff</h2>";
 echo"<br>";
 $x = "This is a php page";
 echo"This is a test and...<br> $x";
+echo"<br>";
 $Y = "This is a second Variable";
 echo"There are 2 varibles in this page<br>";
-echo $x;
+echo $Y;
