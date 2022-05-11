@@ -14,3 +14,7 @@ echo"<br>";
 $Y = "This is a second Variable";
 echo"There are 2 varibles in this page<br>";
 echo $Y;
+echo"Lets do math with php variables";
+$X = 10;
+$y = 20;
+echo $X + $y;
