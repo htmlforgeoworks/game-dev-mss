@@ -9,3 +9,6 @@ $AAa = "Hello";
 $AAA = "How are you";
 $aAA = "<br>";
 echo $AAa;
+echo $aAA;
+echo $AAA;
+echo $Aaa;
