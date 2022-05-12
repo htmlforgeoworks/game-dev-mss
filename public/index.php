@@ -23,4 +23,6 @@ $y = 20;
 echo $X;
 echo"<br>";
 echo $y;
+echo"<br>";
+echo"<br>";
 echo $X + $y;
