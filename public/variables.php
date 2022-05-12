@@ -7,4 +7,5 @@ $aA = "This is my fourth php variable";
 $Aaa = "How many variables can we do?";
 $AAa = "Hello";
 $AAA = "How are you";
+$aAA = "<br>";
 echo $AAa;
