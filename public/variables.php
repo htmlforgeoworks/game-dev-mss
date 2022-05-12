@@ -11,4 +11,5 @@ $aAA = "<br>";
 echo $AAa;
 echo $aAA;
 echo $AAA;
+echo $aAA;
 echo $Aaa;
