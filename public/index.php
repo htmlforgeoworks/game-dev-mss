@@ -4,7 +4,7 @@ echo"<h1>Index.php</h1><br>";
 echo"<p>Here will be a library of php Files</p>";
 echo"<hr>";
 echo"<h2>The following files:</h2>";
-echo"<a href='https://htmlforgeoworks.github.io/game-dev-mss/public/myphp01.php'>Myphp01.php</a>";
+echo"<a href='myphp01.php'>Myphp01.php</a>";
 echo"<hr>";
 echo"<h2>Some other php stuff</h2>";
 echo"<br>";
