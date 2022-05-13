@@ -26,3 +26,9 @@ echo $y;
 echo"<br>";
 echo"<br>";
 echo $X + $y;
+
+
+?>
+
+adfg
+
