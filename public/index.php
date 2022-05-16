@@ -5,6 +5,8 @@ echo"<p>Here will be a library of php Files</p>";
 echo"<hr>";
 echo"<h2>The following files:</h2>";
 echo"<a href='myphp01.php'>Myphp01.php</a>";
+echo"<a href='myphp02.php'>Myphp02.php</a>";
+echo"<a href='variables.php'>Variables.php</a> ";
 echo"<hr>";
 echo"<h2>Some other php stuff</h2>";
 echo"<br>";
