@@ -32,7 +32,3 @@ echo"<br>";
 echo $X + $y;
 
 
-?>
-
-adfg
-
