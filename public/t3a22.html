@@ -7,69 +7,44 @@
 
 <script>
 
-   var myGamePiece;
-   
-   function startGame() {
-       myGamePiece = new component(30, 30, "red", 80, 75);
-       myGameArea.start();
+   // global variables here
+   let myGlobalX = 0
+   let myClock
+
+
+   // global functions here
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
    }
-   
-   var myGameArea = {
-       canvas : document.createElement("canvas"),
-       start : function() {
-           this.canvas.width = 480;
-           this.canvas.height = 270;
-           this.context = this.canvas.getContext("2d");
-           document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-           this.interval = setInterval(updateGameArea, 20);        
-       },
-       stop : function() {
-           clearInterval(this.interval);
-       },    
-       clear : function() {
-           this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-       }
+}
+
+
+function myCheckHit(){
+   if ( myHitOther('myImg01','myImg02') ){
+       alert('you lose')  
+       document.getElementById('myImg01').style.left = '20px'
+       location = 't4a03.html'  // go to your next level
    }
-   
-   function component(width, height, color, x, y, type) {
-       this.type = type;
-       this.width = width;
-       this.height = height;
-       this.x = x;
-       this.y = y;    
-       this.speedX = 0;
-       this.speedY = 0;    
-       this.gravity = 0.05;
-       this.gravitySpeed = 0;
-       this.update = function() {
-           ctx = myGameArea.context;
-           ctx.fillStyle = color;
-           ctx.fillRect(this.x, this.y, this.width, this.height);
-       }
-       this.newPos = function() {
-           this.gravitySpeed += this.gravity;
-           this.x += this.speedX;
-           this.y += this.speedY + this.gravitySpeed;
-           this.hitBottom();
-       }
-       this.hitBottom = function() {
-           var rockbottom = myGameArea.canvas.height - this.height;
-           if (this.y > rockbottom) {
-               this.y = rockbottom;
-               this.gravitySpeed = 0;
-           }
-       }
-   }
-   
-   function updateGameArea() {
-       myGameArea.clear();
-       myGamePiece.newPos();
-       myGamePiece.update();
-   }
-   
-   function accelerate(n) {
-       myGamePiece.gravity = n;
-   }
+
+
+   // more if statements here like the above
+
+
+
+}  // end of myCheckHit()
+
    </script>
 
 <img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="myImage01.jpg">
