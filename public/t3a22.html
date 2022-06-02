@@ -40,17 +40,20 @@ function myCheckHit(){
        alert('You lose. Do this level again')  
        document.getElementById('myImg01').style.left = '20px'
        location = 't4a03.html'  // go to your next level
-   }
-
-
-   // more if statements here like the above
-  if ( myHitOther('myImg01','myImg03) ){
+}  // end of myCheckHit()
+   
+      // more if statements here like the above
+  if (myHitOther('myImg01','myImg03')) {
        alert('You lose. Do this level again.')
        document.getElementById('myImg01').style.left = '20px'
        location = 't3a22.html' // continue play this level till reached end
-
-
-}  // end of myCheckHit()
+       }
+  if (myHitOther('myImg01', 'myImg04')){
+      alert('You lose. Do this level agian')
+      document.getElementById('myImg01').style.left = '20px'
+      location = 't3a22.html'
+  }
+      }
 
    </script>
 
